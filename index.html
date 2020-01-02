@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>testejs</title>
+</head>
+
+<body>
+    <h5 id="confnome" hidden></h5>
+    <h5 id="confemail" hidden></h5>
+    <h5 id="confpassword" hidden></h5>
+
+
+
+    <form method="POST" action="php/index.php">
+        <div class="form-group" style="margin-bottom: 10px">
+            <label id="labelnome">Nome</label>
+            <input id="nome" type="text" name="nome" required>
+        </div>
+        <div class="form-group" style="margin-bottom: 10px">
+            <label id="labelemail">email</label>
+            <input id="email" type="email" name="email" required>
+        </div>
+        <div class="form-group" style="margin-bottom: 30px">
+            <label id="labelpassword">Senha</label>
+            <input id="password" type="password" name="senha" required>
+        </div>
+        <button id="salvar" type="submit" hidden>enviar</button>
+        <button id="confirm" type="button" onclick="confirmar()">Confirmar dados</button>
+    </form>
+
+
+
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
