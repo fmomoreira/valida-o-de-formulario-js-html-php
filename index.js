@@ -1,4 +1,5 @@
 
+
 function confirmar(){
 
     //pega os valores  dos inputs a serem preenchidos 
@@ -23,13 +24,11 @@ function confirmar(){
     
 
    //Selecionando os labels e inputs
-    let inptname = document.querySelector("#nome");
-    let inptemail = document.querySelector("#email");
-    let inptpassword = document.querySelector("#password");
+    let inptname = document.querySelector("#nomenone");
+    let inptemail = document.querySelector("#emailnone");
+    let inptpassword = document.querySelector("#passwordnone");
     let btconfirm = document.querySelector("#confirm");
-    let labelname = document.querySelector("#labelnome");
-    let labelemail = document.querySelector("#labelemail");
-    let labelpassword = document.querySelector("#labelpassword");
+    
 
 
 
@@ -37,10 +36,7 @@ function confirmar(){
     inptname.setAttribute('hidden',true);
     inptemail.setAttribute('hidden',true);
     inptpassword.setAttribute('hidden',true);
-    labelname.setAttribute('hidden',true);
-    labelemail.setAttribute('hidden',true);
-    labelpassword.setAttribute('hidden',true);
-    btconfirm.setAttribute('hidden',true);
+    btconfirm.style.display="none";
 
 
 
@@ -60,5 +56,8 @@ function confirmar(){
 
     
 }
+
+
+
 
 
