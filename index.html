@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>testejs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
 <body>
+    <div class="container" style="padding: 5rem;">
     <h5 id="confnome" hidden></h5>
     <h5 id="confemail" hidden></h5>
     <h5 id="confpassword" hidden></h5>
@@ -16,26 +19,52 @@
 
 
     <form method="POST" action="php/index.php">
-        <div class="form-group" style="margin-bottom: 10px">
-            <label id="labelnome">Nome</label>
-            <input id="nome" type="text" name="nome" required>
+        <div class="field" id="nomenone">
+            <p class="control has-icons-left">
+               
+              <input class="input" id="nome" type="text" name="nome" placeholder="Nome" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+            </p>
+          </div>
+        <div class="field" id="emailnone" >
+            <p class="control has-icons-left has-icons-right">
+               
+              <input class="input" type="email" name="email" id="email" placeholder="Email" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field" id="passwordnone">
+            <p class="control has-icons-left">
+               
+              <input class="input" id="password" type="password" name="senha" placeholder="Password" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+         
+     
+        
+       
+
+            <a id="confirm"   class="button is-primary" onclick="confirmar()">Confirmar dados</a>
+
+        
+        <div id="salvar"  hidden>        
+            <button  class="button is-primary" type="submit"  >enviar</button>
         </div>
-        <div class="form-group" style="margin-bottom: 10px">
-            <label id="labelemail">email</label>
-            <input id="email" type="email" name="email" required>
-        </div>
-        <div class="form-group" style="margin-bottom: 30px">
-            <label id="labelpassword">Senha</label>
-            <input id="password" type="password" name="senha" required>
-        </div>
-        <button id="salvar" type="submit" hidden>enviar</button>
-        <button id="confirm" type="button" onclick="confirmar()">Confirmar dados</button>
-    </form>
+        </form>
 
 
-
-
-    <script type="text/javascript" src="index.js"></script>
-</body>
-
-</html>
+    </div>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+    
+    </html>
